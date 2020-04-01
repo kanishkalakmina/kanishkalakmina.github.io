@@ -55,7 +55,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><nav>
       <ul class="nav navbar-nav navbar-right">
         
-		<li><a href="Index.html">home</a></li>
+		<li><a href="homefinal.html">home</a></li>
 		  				<li><a href="new_product.html">New Products</a></li>
 						<li><a href="product_details.html">Products Details</a></li>
 						<li><a href="buy_product.html">Buy Product</a></li>
@@ -75,9 +75,29 @@
 	<br><br><br>
 	  
 	
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.687279282927!2d80.56474551472196!3d7.162104994828736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae371ddef092d33%3A0x5526fd6d7354264f!2sGampola%20Railway%20Station!5e0!3m2!1sen!2slk!4v1585574780172!5m2!1sen!2slk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-   
+	
+	<br>
+	 <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
 	
 	
 	
